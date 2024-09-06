@@ -1,0 +1,7 @@
+USE [70-461] 
+GO 
+
+CREATE TABLE Employee (
+[Id] INT NOT NULL IDENTITY,
+[Name] NVARCHAR(50) NOT NULL,
+);

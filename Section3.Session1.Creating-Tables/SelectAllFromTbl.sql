@@ -1,0 +1,1 @@
+SELECT [Number] FROM [dbo].[tblSecond]
