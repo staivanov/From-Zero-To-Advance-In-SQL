@@ -1,0 +1,2 @@
+DECLARE @myDate AS DATETIME = '2024-06-15 13:58:10.193'
+SELECT @myDate AS [MyDate]
