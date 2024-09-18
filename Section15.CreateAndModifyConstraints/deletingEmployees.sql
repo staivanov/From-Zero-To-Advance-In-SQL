@@ -1,0 +1,8 @@
+BEGIN TRAN
+DELETE FROM [dbo].[Employee]
+WHERE [Id] < 3
+
+DELETE TOP(2)
+FROM [dbo].[Employee]
+WHERE [Id] IN (154, 155) 
+ROLLBACK TRAN
