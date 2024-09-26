@@ -29,3 +29,18 @@ GO
 
 
 EXECUTE [NameEmployees] 4
+GO
+	
+
+CREATE PROC NameEmployeesFromTo(@EmployeeNumberFrom INT, @EmployeeNumberTo INT) AS 
+	BEGIN 
+		IF EXISTS (SELECT * FROM [tblEmployee] WHERE EmployeeNumber BETWEEN @EmployeeNumberFrom AND @EmployeeNumberTo)
+		BEGIN 
+			SELECT EmployeeNumber, EmployeeFirstName, EmployeeLastName
+				FROM [tblEmployee] 
+				WHERE [EmployeeNumber] BETWEEN @EmployeeNumberFrom AND @EmployeeNumberTo
+		END
+END
+GO
+
+[NameEmployeesFromTo] 150, 200
